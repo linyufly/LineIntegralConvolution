@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+  <meta charset = "utf-8">
+  <title> Line Integral Convolution </title>
+</head>
+
+<body onload = "main()">
+<body>
+  <form id = "input_form">
+    <fieldset>
+      <legend>
+        Visualization Parameters
+      </legend>
+
+      Scalar Value
+      <input type="radio" name="scalar" id="gaussian" value="gaussian" checked> Gaussian
+      <input type="radio" name="scalar" id="divergence" value="divergence"> Divergence<br>
+
+      Tracing Length (L) <input type = "text" id = "tracing_length" value = "0.1"><br>
+      Tracing step (ds) <input type = "text" id = "tracing_step" value = "0.01"><br>
+
+      Color Map
+      <input type = "radio" name = "color" id = "rainbow" value = "rainbow"> Rainbow
+      <input type = "radio" name = "color" id = "greyscale" value = "greyscale" checked> Greyscale<br>
+    </fieldset>
+  </form>
+
+  <button onclick="render()">
+    Render
+  </button><br>
+
+  <canvas id = "example" width = "400" height = "400">
+    Please use a browser that supports "canvas".
+  </canvas>
+  <canvas id = "noise" width = "400" height = "400">
+    Please use a browser that supports "canvas".
+    This is supposed to be noisy.
+  </canvas>
+  <canvas id = "convolution" width = "400" height = "400">
+    Please use a browser that supports "canvas".
+    This is supposed to be a line integral convolution.
+  </canvas>
+
+  <script src = "UGrid2D.js"></script>
+  <script src = "SciVisMath.js"></script>
+  <script src = "LIC.js"></script>
+</body>
+
+</html>
